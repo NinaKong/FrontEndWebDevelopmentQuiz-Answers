@@ -1,5 +1,5 @@
-# FrontEnd-Quiz
-FrontEnd-Quiz: http://davidshariff.com/quiz/
+# Front End Web Development
+Front End Web Development Quiz: http://davidshariff.com/quiz/
 
 CSS Part:
 
