@@ -102,3 +102,13 @@ CSS Part:
    </article>
    ```
    Answer：Yes
+   
+- Does the HTML below trigger a http request when the page first loads ?
+  HTML:
+   ```
+   <img src="mypic.jpg" style="visibility: hidden" alt="My picture">
+   ```
+   Answer: Yes 
+   
+   It will trigger a http request above, even though you use display:none or visibility:hidden. 
+
