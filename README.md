@@ -90,3 +90,15 @@ CSS Part:
    Answer: Yes
 
    The image still has been downloaded, and hidden.
+   
+- Does HTML5 support block-level links?
+   HTML:
+   ```
+   <article>
+      <a href="#">
+          <h1>Hello</h1>
+          <p>I am some text</p>
+      </a>
+   </article>
+   ```
+   Answer：Yes
