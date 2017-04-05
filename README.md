@@ -111,4 +111,37 @@ CSS Part:
    Answer: Yes 
    
    It will trigger a http request above, even though you use display:none or visibility:hidden. 
-
+   
+- Does the HTML below trigger a http request when the page first loads?
+   HTML:
+   ```   
+   <div style="display: none;">
+      <img src="mypic.jpg" alt="My photo">
+   </div>
+   ```
+   Answer: Yes 
+   
+   It will trigger a http request above, even though you use display:none or visibility:hidden. 
+   
+- Does main1.css have to be downloaded and parsed before main2.css can be fetched?
+   HTML:
+   ```
+   <head>
+      <link href="main1.css" rel="stylesheet">
+      <link href="main2.css" rel="stylesheet">
+   </head>
+   ```
+   Answer: Yes 
+   
+- Does main2.css have to be downloaded and parsed before Paragraph 1 is rendered
+   HTML:
+   ```
+   <head>
+      <link href="main1.css" rel="stylesheet">
+   </head>
+   <body>
+      <p>Paragraph 1</p>
+      <p>Paragraph 2</p>
+      <link href="main2.css" rel="stylesheet">
+   </body>
+   ```
