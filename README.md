@@ -52,4 +52,41 @@ The .favorite:not(#awesome) selector matches favorite class that is NOT id aweso
 And it only has one hightlight class, so .highlight:nth-of-type(1):nth-last-of-type(1) is itself.
 However, the first css style has one id and two classes, and the second has same id and only one, so the first one has higher specificity.
 
-In css, more specific selectors override less specific ones regardless of order, so your text is red.
+In CSS, more specific selectors override less specific ones regardless of order, so your text is red.
+
+- Are unused style resources still downloaded by the browser?
+HTML:
+```
+<div id="test1">
+   <span id="test2"></span>
+</div>
+```
+CSS:
+```
+#i-am-useless {
+    background-image: url('mypic.jpg');
+}
+```
+Answer: No
+This is depend on each browser. Almost all browsers do not download unrequired images. 
+
+- On page load, will mypic.jpg get downloaded by the browser?
+HTML:
+```
+<div id="test1">
+   <span id="test2"></span>
+</div>
+```
+CSS:
+```
+#test1 {
+    display: none;
+}
+#test2 {
+    background-image: url('mypic.jpg');
+    visibility: hidden;
+}
+```
+Answer: Yes
+
+The image still has been downloaded, and hidden.
