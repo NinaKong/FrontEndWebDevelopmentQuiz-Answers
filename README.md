@@ -26,6 +26,7 @@ ul.shopping-list li .highlight:nth-of-type(odd) {
 }
 ```
 Answer: Blue
+
 The :nth-of-type(odd) selector matches every element that is the odd child, of a particular type, of its parent.
 highlight class only show up once, and ul.shopping-list li .highlight:nth-of-type(odd) has high specificity
 
