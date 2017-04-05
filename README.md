@@ -1,4 +1,4 @@
-# Front End Web Development Quiz Answer
+# Front End Web Development Quiz Answers
 Front End Web Development Quiz: http://davidshariff.com/quiz/
 
 CSS Part:
