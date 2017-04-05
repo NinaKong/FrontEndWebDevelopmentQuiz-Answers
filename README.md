@@ -10,12 +10,12 @@ CSS Part:
 - In a HTML document, the pseudo class :root always refers to the element. Answer: True
 - The translate() function can move the position of an element on the z-axis. Answer: False
 - Given the HTML below:
-```
-<ul class="shopping-list" id="awesome">
-   <li><span>Milk</span></li>
-   <li class="favorite" id="must-buy"><span class="highlight">Sausage</span></li>
-</ul>
-```
+   ```
+   <ul class="shopping-list" id="awesome">
+      <li><span>Milk</span></li>
+      <li class="favorite" id="must-buy"><span class="highlight">Sausage</span></li>
+   </ul>
+   ```
 What is the color of the text Sausage ?
 ```
 ul.shopping-list li .highlight {
