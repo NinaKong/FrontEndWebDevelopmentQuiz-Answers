@@ -9,4 +9,19 @@ CSS Part:
 - The pseudo class :checked will select inputs with type radio or checkbox, but not elements. Answer: False
 - In a HTML document, the pseudo class :root always refers to the element. Answer: True
 - The translate() function can move the position of an element on the z-axis. Answer: False
+- 
+```
+Given the HTML below:
+<ul class="shopping-list" id="awesome">
+   <li><span>Milk</span></li>
+   <li class="favorite" id="must-buy"><span class="highlight">Sausage</span></li>
+</ul>
+What is the color of the text Sausage ?
+ul.shopping-list li .highlight {
+    color: red;
+}
+ul.shopping-list li .highlight:nth-of-type(odd) {
+    color: blue;
+}
+```
 
