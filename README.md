@@ -203,7 +203,7 @@ CSS Part:
    ```
    Answer: 4
    
-   If code is not using "use strict" mode, the setTimeout() is point to window, so this.x is equal to window.x, which is 4
+   If code is not using "use strict" mode, the setTimeout() is point to window, so this.x is equal to window.x, which is 4
    
 - What value is alerted?
    ```
