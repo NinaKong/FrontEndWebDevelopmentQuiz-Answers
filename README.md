@@ -215,7 +215,7 @@ CSS Part:
    var foo = new bar();
    alert(foo.x);
    ```
-   Answer： 
+   Answer：2
    
 - What value is alerted?
    ```
