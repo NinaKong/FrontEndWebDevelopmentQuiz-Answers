@@ -124,6 +124,7 @@ CSS Part:
    It will trigger a http request above, even though you use display:none or visibility:hidden. 
    
 - Does main1.css have to be downloaded and parsed before main2.css can be fetched?
+   
    HTML:
    ```
    <head>
@@ -131,7 +132,9 @@ CSS Part:
       <link href="main2.css" rel="stylesheet">
    </head>
    ```
-   Answer: Yes 
+   Answer: No
+   
+   CSS files are downloaded in parallel, which means both files are downloaded at the same time.
    
 - Does main2.css have to be downloaded and parsed before Paragraph 1 is rendered
    HTML:
@@ -145,3 +148,40 @@ CSS Part:
       <link href="main2.css" rel="stylesheet">
    </body>
    ```
+   
+   Answer: No
+   
+   Since style1.css is in head, it will be downloaded before the page loads. After the page has rendered, it will download style2.css file. When it is finished, the style2.css will style the page.
+   
+- What is the order of values alerted?  
+   ```
+   var x = 3;
+
+   var foo = {
+       x: 2,
+       baz: {
+           x: 1,
+           bar: function() {
+               return this.x;
+           }
+       }
+   }
+
+   var go = foo.baz.bar;
+
+   alert(go());
+   alert(foo.baz.bar());
+   ```
+   Answer: 3，1
+   
+   Javascript scope. 
+   
+   The scope of go is window object. 
+   ```
+   var go = function() {
+      rerurn this.x;
+   }
+   ```
+   It is window.x, which is equal to 3.
+   
+   foo.baz.bar(), we should check the scope of foo.baz, foo.baz.x is equal to 1.
