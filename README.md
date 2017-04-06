@@ -239,6 +239,7 @@ CSS Part:
    Answer: 2
    
    arr = ["a", "b", foo: "c"]
+   
    The array object length only accounts for integer indexes. arr.foo = 'c', it is a property in arr object, it is not an integer value. The length of arrays only increase when it is integer indexes. 
    So the arr.length is 2, should not include foo.
    
@@ -252,5 +253,6 @@ CSS Part:
    ```
 
    Answer: 2
+   
    Function's arguments object indicates the list of function arguments, the first one index starting at 0. So arguments[0] = 2 actually means the first argument a = 2.
 
