@@ -238,7 +238,9 @@ CSS Part:
    ```
    Answer: 2
    
-   arr = ["a", "b", foo: "c"], so the arr.length is 2, not include foo.
+   arr = ["a", "b", foo: "c"]
+   The array object length only accounts for integer indexes. arr.foo = 'c', it is a property in arr object, it is not an integer value. The length of arrays only increase when it is integer indexes. 
+   So the arr.length is 2, should not include foo.
    
 - What value is alerted?
    ```
