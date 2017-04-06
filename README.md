@@ -174,14 +174,81 @@ CSS Part:
    ```
    Answer: 3，1
    
-   Javascript scope. 
-   
+   Javascript scope. 
+
    The scope of go is window object. 
    ```
    var go = function() {
-      rerurn this.x;
+   rerurn this.x;
    }
    ```
    It is window.x, which is equal to 3.
-   
+
    foo.baz.bar(), we should check the scope of foo.baz, foo.baz.x is equal to 1.
+   
+- What value is alerted?
+   ```
+   var x   = 4,
+       obj = {
+           x: 3,
+           bar: function() {
+               var x = 2;
+               setTimeout(function() {
+                   var x = 1;
+                   alert(this.x);
+               }, 1000);
+           }
+       };
+   obj.bar();
+   ```
+   Answer: 4
+   
+   If code is not using "use strict" mode, the setTimeout() is point to window, so this.x is equal to window.x, which is 4
+   
+- What value is alerted?
+   ```
+   x = 1;
+   function bar() {
+       this.x = 2;
+       return x;
+   }
+   var foo = new bar();
+   alert(foo.x);
+   ```
+   Answer： 
+   
+- What value is alerted?
+   ```
+   function foo(a) {
+       alert(arguments.length);
+   }
+   foo(1, 2, 3);
+   ```
+   Answer: 3
+   
+   In function foo, it only has one argument, arguments obejct can get all arguments of the function no matter of function foo only has one argument. So the foo(1, 2, 3).length is 3
+   
+- What value is alerted? 
+   ```
+   var arr = [];
+   arr[0]  = 'a';
+   arr[1]  = 'b';
+   arr.foo = 'c';
+   alert(arr.length);
+   ```
+   Answer: 2
+   
+   arr = ["a", "b", foo: "c"], so the arr.length is 2, not include foo.
+   
+- What value is alerted?
+   ```
+   function foo(a) {
+       arguments[0] = 2;
+       alert(a);
+   }
+   foo(1);
+   ```
+
+   Answer: 2
+   Function's arguments object indicates the list of function arguments, the first one index starting at 0. So arguments[0] = 2 actually means the first argument a = 2.
+
