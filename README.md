@@ -21,6 +21,7 @@ CSS Part:
 - The pseudo class :checked will select inputs with type radio or checkbox, but not elements. Answer: False
 - In a HTML document, the pseudo class :root always refers to the element. Answer: True
 - The translate() function can move the position of an element on the z-axis. Answer: False
+
 - Given the HTML below:
    ```
    <ul class="shopping-list" id="awesome">
@@ -164,7 +165,8 @@ CSS Part:
    Answer: No
    
    Since style1.css is in head, it will be downloaded before the page loads. After the page has rendered, it will download style2.css file. When it is finished, the style2.css will style the page.
-   
+
+JavaScript Part:
 - What is the order of values alerted?  
    ```
    var x = 3;
